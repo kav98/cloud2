@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/kav98/cloud2/issues"
   },
-  "homepage": "https://github.com/kav98/cloud2#readme"
+  "homepage": "https://github.com/kav98/cloud2#readme",
+  "engines": {
+    "node": "14.15.5"
+  }
 }

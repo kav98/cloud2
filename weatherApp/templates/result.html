@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Results - Weather App</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center-on-page">
+        <h1>Weather App</h1>
+        {% for d in data %}
+        <h2>Last 10 Weather entries</h2>
+        <p>{{ d['name'] }}, {{ d['sys']['country'] }}</p>
+        <p>{{ d['main']['temp']}} °C</p>
+        {% endfor %}

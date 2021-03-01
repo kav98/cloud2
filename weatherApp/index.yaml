@@ -1,0 +1,9 @@
+indexes:
+
+- kind: weather
+  ancestor: no
+  properties:
+  - name: timestamp
+    direction: desc
+  - name: result
+  - name: city

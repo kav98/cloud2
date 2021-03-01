@@ -1,0 +1,26 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <title>Weather App</title>
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+    <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="center-on-page">
+        <h1>Weather App </h1>
+
+        <form class="form-inline" method="POST" action="{{ url_for('result') }}">
+        <div class="select">
+            <select name="comp_select" class="selectpicker form-control">
+                {% for o in data %}
+                <option value="{{ o.name }}">{{ o.name }}</option>
+                {% endfor %}
+            </select>
+        </div>
+        <button type="submit" class="btn">Go</button>
+        </form>
+    </div>
+</body>
+</html>
